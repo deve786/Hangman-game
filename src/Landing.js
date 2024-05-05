@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './App.css'
 function Landing() {
   return (
-    <div className='d-flex align-items-center justify-content-center'>
+    <div className='d-flex align-items-center justify-content-center h-100'>
         
       <div className='box w-75 p-4 py-5 rounded-2 d-flex-col align-items-center justify-content-center'>
         <h2 className='pt-3 text-center fw-bold'>Hangman</h2>

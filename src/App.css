@@ -1,3 +1,8 @@
+.App{
+    background-image: url('../public/img.jpg');
+    background-size: cover;
+    height: 100vh;
+}
 .box {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -16,7 +21,4 @@
 .btns:hover{
     color:white;
     transform: scaleX(1.02);
-}
-.img {
-    
 }
