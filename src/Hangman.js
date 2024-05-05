@@ -63,7 +63,7 @@ function Hangman() {
                 wrongGuess >= maxGuess &&
                 <div className="game-model">
                     <div className="content">
-                        <img src="./assets/lost.gif" alt="" />
+                        <img src="./assets/images/lost.gif" alt="" />
                         <h5>The correct word was: <b>{newWord.toUpperCase()}</b></h5>
                         <h4 className='text-danger'>Game Over!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
@@ -76,7 +76,7 @@ function Hangman() {
                 victory() &&
                 <div className="game-model">
                     <div className="content">
-                        <img src="./assets/victory.gif" alt="" />
+                        <img src="./assets/images/victory.gif" alt="" />
                         <h4>Word: {newWord.toUpperCase()}</h4>
                         <h4 className='text-success'>You Won...!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
