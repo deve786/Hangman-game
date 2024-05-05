@@ -1,0 +1,180 @@
+.App {
+  background-image: url('../public/img.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px; /* Ensure there's a little padding around the container */
+}
+
+
+.hangman-sub {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 2% 2%;
+  box-sizing: border-box;
+}
+
+.letter {
+  border-bottom: solid black 3px;
+  list-style: none;
+  width: 10px; /* Reduced width */
+  margin: 0 1px; /* Reduced margin */
+  padding: 5px 0; /* Ensure visibility */
+
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+}
+
+.guessed{
+  border-color: transparent;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.word-display {
+  gap: 5px; /* Reduced gap */
+  padding: 0;
+  justify-content: space-around;
+}
+
+.keyboard button {
+  font-size: 3vw; /* Smaller font size for buttons */
+  padding: 8px 8px;
+  margin: 1px;
+  min-width: 30px; /* Minimum width for tap targets */
+}
+
+@media (min-width: 768px) {
+  .keyboard button {
+      font-size: 16px;
+      padding: 12px 12px;
+  }
+
+  .hangman-sub {
+      width: 75%;
+      padding: 40px 20px;
+  }
+
+  .word-display {
+      gap: 15px;
+  }
+
+  .letter {
+      width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hangman-box img {
+      width: 70%; /* Reduced size for the hangman image */
+  }
+
+  .hangman-sub {
+      padding: 10px; /* Reduced padding */
+  }
+
+  .game-box h5, .game-box h4 {
+      font-size: small; /* Smaller text */
+  }
+
+  .keyboard button {
+      padding: 5px; /* Smaller padding for buttons */
+  }
+}
+
+:where(.game-modal,.keyboard) button
+{
+  
+  align-items: center;
+  appearance: none !important;
+  background-color: #FCFCFD;
+  border-radius: 4px !important;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer !important;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace !important  ;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  margin-right:5px;
+  margin-bottom: 5px;
+}
+
+.game-modal button:focus, .keyboard button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.game-modal button:hover, .keyboard button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.game-modal button:active, .keyboard button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.game-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  display: flex;
+justify-content: center;
+align-items: center
+}
+.content{
+  background-color: #FCFCFD;
+  max-width: 450px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  padding: 19px;
+}
+.game-modal img{
+  width: 130px;
+  margin-bottom: 20px;
+}
+
+.game-modal p{
+  font-size: 1.15rem;
+  margin:15px 0 30px;
+  font-weight: 500;
+}
+.game-modal b{
+  color: #5E63BA;
+  text-transform: capitalize;
+}
+
+.game-modal button{
+  padding: 12px 24px;
+}
