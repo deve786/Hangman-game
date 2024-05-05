@@ -86,7 +86,7 @@ function Hangman() {
 
 
             <Container className='hangman-sub' style={{ maxWidth: "1200px" }}>
-                <Row>
+                <Row className='rowzz'>
                     <Col className='d-flex align-items-center justify-content-center'>
                         <div className='hangman-box d-flex justify-content-center align-items-center'>
                             <img src={`./assets/images/hangman-${wrongGuess}.svg`} alt="" />

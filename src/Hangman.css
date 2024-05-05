@@ -204,4 +204,9 @@
     .hangman-box img{
         width: 200px;
     }
+    .rowzz{
+        display: flex;
+        flex-direction: column;
+    }
 }
+
