@@ -200,7 +200,7 @@
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 499px) {
     .hangman-box img{
         width: 200px;
     }

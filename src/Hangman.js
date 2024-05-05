@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Hangman.css'
 import { Col, Container, Row } from 'react-bootstrap'
 import WordList from './WordList' //1.import wordlist
+import { Link } from 'react-router-dom'
 
 function Hangman() {
 
@@ -67,6 +68,7 @@ function Hangman() {
                         <h5>The correct word was: <b>{newWord.toUpperCase()}</b></h5>
                         <h4 className='text-danger'>Game Over!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
+                        <Link to={'/'}><button  className='play-again mt-2'>Home</button></Link>
                         {/* 18. call randomWord function in inClick  */}
                     </div>
                 </div>
@@ -80,6 +82,7 @@ function Hangman() {
                         <h4>Word: {newWord.toUpperCase()}</h4>
                         <h4 className='text-success'>You Won...!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
+                        <Link to={'/'}><button  className='play-again mt-2'>Home</button></Link>
                     </div>
                 </div>
             }
